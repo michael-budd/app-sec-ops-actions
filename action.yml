@@ -1,0 +1,14 @@
+name: "Kaleidoscope Github Action"
+description: "Kaleidoscope is about to enhance your AppSecOps"
+author: "Kaleidoscope"
+inputs:
+ sarif_file:
+  description: "Sarif file to upload into dashboard"
+  required: false
+  default: "../results"
+runs:
+ using: "node16"
+ main: "/lib/upload-sarif-action.js"
+branding:
+ icon: "check"
+ color: "green"
